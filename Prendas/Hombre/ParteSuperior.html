@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RF | Prenda superior Masculino</title>
+    <link rel="stylesheet" href="../../css/prenCalz.css">
+    <link rel="stylesheet" href="../../css/menuPie.css">
+     <link rel="icon" href="../../imagenes/icon.ico">
+</head>
+<body>
+  <header>
+          <nav class="navbar">
+          <div class="logo"><a href="../../index.html">RF | RenovaFIT</a></div>
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+          <ul class="menu">
+              <li><a href="../../index.html">Inicio</a></li>
+              <li class="submenu">
+              <a href="#">Tienda ▾</a>
+              <ul>
+                  <li><a href="../Coleccion_Hombre.html">Hombre</a></li>
+                  <li><a href="../Coleccion_Mujer.html">Mujer</a></li>
+                  <li><a href="../Accesorios.html">Accesorio</a></li>
+              </ul>
+              </li>
+              <li><a href="../../login.html">Login</a></li>
+          </ul>
+          </nav>
+  </header>
+
+  <section class="filter-section">
+    <h2>Filtrar por precio</h2>
+    <div class="range-container">
+      <span>$500</span>
+      <input type="range" id="price-range" min="500" max="2000" value="2000" step="10">
+      <span id="range-value">$2000</span>
+    </div>
+  </section>
+
+  <main id="product-list">
+    <div class="product">
+      <img src="../../imagenes/Prenda_Sup/90909043.jpg" alt="Camisa deportiva">
+      <h3>Camisa deportiva</h3>
+      <p>$1200 MXN</p>
+      <button onclick="openModal(this)">Comprar ahora</button>
+    </div>
+
+    <div class="product">
+      <img src="../../imagenes/Prenda_Sup/camisah2.jpg" alt="Camisa casual">
+      <h3>Camisa casual</h3>
+      <p>$800 MXN</p>
+      <button onclick="openModal(this)">Comprar ahora</button>
+    </div>
+
+    <div class="product">
+      <img src="../../imagenes/Prenda_Sup/camisah3.jpg" alt="Camisa premium">
+      <h3>Camisa premium</h3>
+      <p>$1700 MXN</p>
+      <button onclick="openModal(this)">Comprar ahora</button>
+    </div>
+
+    <div class="product">
+      <img src="../../imagenes/Prenda_Sup/1000035731.jpg" alt="Camisa premium">
+      <h3>Camisa premium</h3>
+      <p>$1700 MXN</p>
+      <button onclick="openModal(this)">Comprar ahora</button>
+    </div>
+  </main>
+
+  <p id="no-results">No hay productos con ese precio.</p>
+
+  <!-- Modal -->
+  <div class="modal" id="product-modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <h3 id="modal-name"></h3>
+      <p id="modal-price"></p>
+      <p id="modal-desc" class="modal-desc"></p>
+      <label for="size">Talla:</label><br>
+      <select id="size">
+        <option value="">Selecciona tu talla</option>
+        <option>Chica</option>
+        <option>Extra Chica</option>
+        <option>Grande</option>
+        <option>Extra Grande</option>
+        <option>Mediana</option>
+      </select><br>
+      <button class="buy-btn" onclick="buyProduct()">Comprar</button>
+    </div>
+  </div>
+  
+
+  <script src="../../js/prenCalz.js"></script>
+</body>
+</html>

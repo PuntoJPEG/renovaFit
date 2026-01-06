@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RF | Accesorios Deportivos</title>
+  <link rel="stylesheet" href="../css/accesorio.css">
+  <link rel="stylesheet" href="../css/menuPie.css">
+  <link rel="icon" href="../imagenes/icon.ico">
+
+</head>
+<body>
+    <!-- Menu-->  
+    <header>
+        <nav class="navbar">
+        <div class="logo"><a href="../index.html">RF | RenovaFIT</a></div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <ul class="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="submenu">
+            <a href="#">Tienda ▾</a>
+            <ul>
+                <li><a href="Coleccion_Hombre.html">Hombre</a></li>
+                <li><a href="Coleccion_Mujer.html">Mujer</a></li>
+                <li><a href="Accesorios.html">Accesorios</a></li>
+            </ul>
+            </li>
+            <li><a href="../login.html">Login</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!-- Filtros -->
+    <section class="filter-section">
+    <h2>Filtrar productos</h2>
+
+    <!-- Filtro de precio -->
+    <div class="filter-group ranguito">
+        <div class="range-row">
+        <span>$100</span>
+        <input 
+            type="range" 
+            id="price-range" 
+            min="100" 
+            max="1500" 
+            value="1500" 
+            step="10"
+        >
+        <span id="range-value">$1500</span>
+        </div>
+    </div>
+
+    <!-- Filtro categoría -->
+    <div class="filter-group rangote">
+        <label for="category">Categoría:</label>
+        <select id="category">
+        <option value="">Todas</option>
+        <option value="mochila">Mochilas</option>
+        <option value="gorra">Gorras</option>
+        <option value="botella">Botellas</option>
+        <option value="toalla">Toallas</option>
+        <option value="bandas">Bandas</option>
+        <option value="kitDeportivo">Kit Deportivo</option>
+        </select>
+    </div>
+    </section>
+
+  <!-- Catálogo -->
+    <main id="product-list">
+        <div class="product" data-category="mochila" data-color="negro" data-price="1200">
+            <img src="../imagenes/Accesorios/mochila.png" alt="Mochila deportiva">
+            <h3>Mochila deportiva RF</h3>
+            <p>$1200 MXN</p>
+            <button onclick="openModal(this)">Comprar ahora</button>
+        </div>
+
+        <div class="product" data-category="gorra" data-color="gris" data-price="500">
+            <img src="../imagenes/Accesorios/gorra.png" alt="Gorra deportiva">
+            <h3>Gorra</h3>
+            <p>$500 MXN</p>
+            <button onclick="openModal(this)">Comprar ahora</button>
+        </div>
+
+        <div class="product" data-category="botella" data-color="azul" data-price="350">
+            <img src="../imagenes/Accesorios/botella.png" alt="Botella deportiva">
+            <h3>Botella térmica RF</h3>
+            <p>$350 MXN</p>
+            <button onclick="openModal(this)">Comprar ahora</button>
+        </div>
+
+        <div class="product" data-category="toalla" data-color="rojo" data-price="250">
+            <img src="../imagenes/Accesorios/toalla.png" alt="Toalla deportiva">
+            <h3>Toalla</h3>
+            <p>$250 MXN</p>
+            <button onclick="openModal(this)">Comprar ahora</button>
+        </div>
+
+        <div class="product" data-category="bandas" data-color="negro" data-price="600">
+            <img src="../imagenes/Accesorios/banda.png" alt="Bandas de resistencia">
+            <h3>Bandas de resistencia RF</h3>
+            <p>$600 MXN</p>
+            <button onclick="openModal(this)">Comprar ahora</button>
+        </div>
+
+        <div class="product" data-category="kitDeportivo" data-color="negro" data-price="700">
+            <img src="../imagenes/Accesorios/kitDeportivo1.jpg" alt="Kit Deportivo">
+            <h3>Kit Deportivo RF</h3>
+            <p>$700 MXN</p>
+            <button onclick="openModal(this)">Comprar ahora</button>
+        </div>
+
+        <div class="product" data-category="kitDeportivo" data-color="negro" data-price="900">
+            <img src="../imagenes/Accesorios/kitDeportivo2.jpg" alt="Kit Deportivo">
+            <h3>Kit Deportivo RF</h3>
+            <p>$900 MXN</p>
+            <button onclick="openModal(this)">Comprar ahora</button>
+        </div>
+    </main>
+
+    <p id="no-results">No hay productos con ese filtro.</p>
+
+  <!-- Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="">
+        <h3 id="modal-name"></h3>
+        <p id="modal-price"></p>
+        <p id="modal-desc" class="modal-desc"></p>
+        <label for="color-select">Color:</label><br>
+        <select id="color-select">
+            <option value="">Selecciona un color</option>
+            <option>Negro</option>
+            <option>Gris</option>
+            <option>Rojo</option>
+            <option>Azul</option>
+        </select><br>
+        <button class="buy-btn" onclick="buyProduct()">Comprar</button>
+        </div>
+    </div>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/filtro.js"></script>
+
+</body>
+</html

@@ -1,0 +1,255 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------
+     FILTRO — RESPONSIVE REAL
+--------------------------------*/
+
+.filter-section {
+  width: 100%;
+  max-width: 94%;
+  margin: 20px auto;
+  padding: 25px;
+  background: #2f2f2f;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.filter-section h2 {
+  grid-column: span 3;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 500;
+  color: #fff;
+}
+
+/* El rango ocupa toda la fila */
+.ranguito {
+  grid-column: span 3;
+}
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.range-row span {
+  color: #fff;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.range-row input[type="range"] {
+  flex: 1;
+  accent-color: #ffffff;
+}
+
+/* Select */
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  background: #fff;
+  width: 100%;
+}
+.rangote{
+    margin-top: 10px;
+}
+
+/* ===========================
+   RESPONSIVE PARA CELULAR
+   =========================== */
+@media (max-width: 700px) {
+  .filter-section {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .filter-section h2 {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .ranguito {
+    grid-column: span 1;
+  }
+}
+
+/* -------------------------------
+        PRODUCTOS
+--------------------------------*/
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+.product {
+  background: #2f2f2f;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product:hover {
+  transform: scale(1.03);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.product p {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+  animation: glow 1.5s infinite alternate;
+  margin-bottom: 2px;
+}
+
+.product button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.product button:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+#no-results {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  display: none;
+  margin-top: 20px;
+}
+
+/* -------------------------------
+            MODAL
+--------------------------------*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.modal-content h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.4rem;
+}
+
+.modal-content p {
+  margin: 5px 0;
+  color: #444;
+}
+
+.modal-desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 10px 0 15px 0;
+  line-height: 1.4;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #e00;
+  transform: scale(1.1);
+}
+
+.buy-btn {
+  background: linear-gradient(90deg, #000, #333);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(90deg, #333, #000);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Ajustes responsive generales */
+@media (max-width: 600px) {
+  header { font-size: 1.2rem; }
+  main { padding: 10px; }
+  .modal-content { width: 90%; padding: 20px; }
+}

@@ -1,0 +1,52 @@
+.hero {
+      background-image: url('../imagenes/bici.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center 20%;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      border-radius: 8px;
+    }
+
+    /* Espaciador para evitar que el contenido quede bajo el menú */
+    
+
+    /* ===== CONTENIDO ===== */
+    .contenido {
+      background-color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      color: #000;
+    }
+
+    .contenido h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .contenido p {
+      max-width: 700px;
+      margin: 15px auto;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* ===== PIE DE PÁGINA ===== */
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
